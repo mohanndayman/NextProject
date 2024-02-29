@@ -1,0 +1,43 @@
+* {
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.NavBar-Container {
+  width: 100%;
+  position: fixed;
+  height: 8vh;
+  display: flex;
+  border-bottom: 1px solid #ffc300;
+  z-index: 999999999999;
+  backdrop-filter: blur(50px);
+}
+.Logo {
+  width: 40%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffc300;
+}
+.NavBarList {
+  width: 60%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NavBarList ul {
+  display: flex;
+  width: 75%;
+  height: 8vh;
+  align-items: center;
+  justify-content: space-around;
+}
+.NavBarList li {
+  font-size: 1.3rem;
+  color: #ffc300;
+  font-weight: 400;
+  border-bottom: #ffc300 1px solid;
+}

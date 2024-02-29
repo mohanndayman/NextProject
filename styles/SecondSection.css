@@ -1,0 +1,30 @@
+.SecondSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.HeadText {
+  width: 100%;
+  height: 15vh;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.HeadText h1 {
+  font-size: 2.3rem;
+}
+.HeadText p {
+  color: #ffc300;
+  opacity: 0.8;
+}
+.Cards {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}

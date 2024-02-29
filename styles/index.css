@@ -1,0 +1,8 @@
+.indexHomePage {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.HeroSection {
+  height: 220vh;
+}
