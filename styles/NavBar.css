@@ -9,7 +9,7 @@
   position: fixed;
   height: 8vh;
   display: flex;
-  border-bottom: 1px solid #ffc300;
+  border-bottom: 1px solid #ffbf00;
   z-index: 999999999999;
   backdrop-filter: blur(50px);
 }
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffc300;
+  color: #ffbf00;
 }
 .NavBarList {
   width: 60%;
@@ -37,7 +37,7 @@
 }
 .NavBarList li {
   font-size: 1.3rem;
-  color: #ffc300;
+  color: #ffbf00;
   font-weight: 400;
-  border-bottom: #ffc300 1px solid;
+  border-bottom: #ffbf00 1px solid;
 }

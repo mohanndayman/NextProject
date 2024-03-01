@@ -7,22 +7,21 @@ import image2 from "../images/33.jpg";
 import image3 from "../images/44.jpg";
 import image4 from "../images/55.jpg";
 import image5 from "../images/66.jpg";
-import image6 from "../images/77.jpg";
-import image7 from "../images/88.jpg";
-import image8 from "../images/99.jpg";
-import image9 from "../images/99.jpg";
+
 import image10 from "../images/99.jpg";
 import SecondSecion from "./components/SecondSecion";
+import ThirsSecion from "./components/ThirsSecion";
+import Reviews from "./components/Reviews";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const products = [
-    { title: "one o one", link: "#", thumbnail: image1 },
-    { title: "Product 2", link: "#", thumbnail: image5 },
-    { title: "Product 2", link: "#", thumbnail: image2 },
-    { title: "Product 2", link: "#", thumbnail: image4 },
-    { title: "Product 2", link: "#", thumbnail: image10 },
-    { title: "Product 2", link: "#", thumbnail: image3 },
-
+    { title: "one o one", link: "#", thumbnail: image1.src }, // Adjusted image1 to image1.src
+    { title: "Product 2", link: "#", thumbnail: image5.src }, // Adjusted image5 to image5.src
+    { title: "Product 2", link: "#", thumbnail: image2.src }, // Adjusted image2 to image2.src
+    { title: "Product 2", link: "#", thumbnail: image4.src }, // Adjusted image4 to image4.src
+    { title: "Product 2", link: "#", thumbnail: image10.src }, // Adjusted image10 to image10.src
+    { title: "Product 2", link: "#", thumbnail: image3.src }, // Adjusted image3 to image3.src
     // Add more products as needed
   ];
 
@@ -32,6 +31,9 @@ export default function Home() {
         <div className="HeroSection">
           <HeroParallax products={products} />
           <SecondSecion />
+          <ThirsSecion />
+          <Reviews />
+          <Footer />
         </div>
       </div>
     </>

@@ -1,14 +1,37 @@
-import React from "react";
-import "../../styles/SecondSection.css";
+"use client";
+import React, { useEffect } from "react";
+import "../../styles/SecondSection.css"; // Import your CSS file
 import image from "../../images/100.jpg";
 import { PinContainer } from "./3d-pin";
-export function AnimatedPinDemo() {
+
+// Define the AnimatedPinDemo component
+function AnimatedPinDemo() {
+  useEffect(() => {
+    // Add scroll event listener to trigger animation for all AnimatedPinDemo elements
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    // Select all elements with class name .AnimatedPinDemo
+    const elements = document.querySelectorAll(".AnimatedPinDemo");
+    // Loop through each element
+    elements.forEach((element) => {
+      // Trigger animation when the element is in view
+      if (element.getBoundingClientRect().top < window.innerHeight * 0.75) {
+        element.classList.add("fade-in");
+      }
+    });
+  };
+
   return (
-    <div className="h-[30rem] w-55 flex items-center justify-center ">
-      <PinContainer title="Test" href="https://twitter.com/mannupaaji">
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+    <div className="AnimatedPinDemo">
+      <PinContainer title="Test">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
           <h3
-            className="max-w-xs !pb-2 !m-0 font-bold "
+            className="max-w-xs !pb-2 !m-0 font-bold"
             style={{ color: "#ffc300" }}
           >
             Product N2
@@ -26,11 +49,13 @@ export function AnimatedPinDemo() {
     </div>
   );
 }
-function SecondSecion() {
+
+// Define the SecondSection component
+function SecondSection() {
   return (
     <div className="SecondSection">
       <div className="HeadText">
-        <h1>Our Best Products </h1>
+        <h1>Special Offers </h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
           asperiores veniam.{" "}
@@ -45,6 +70,7 @@ function SecondSecion() {
         />
       </div>
       <div className="Cards">
+        {/* Render three instances of AnimatedPinDemo */}
         <AnimatedPinDemo />
         <AnimatedPinDemo />
         <AnimatedPinDemo />
@@ -53,4 +79,4 @@ function SecondSecion() {
   );
 }
 
-export default SecondSecion;
+export default SecondSection; // Export the SecondSection component

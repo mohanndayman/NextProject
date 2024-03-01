@@ -1,6 +1,6 @@
 .SecondSection {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
@@ -27,4 +27,24 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
+}
+/* SecondSection.css */
+.AnimatedPinDemo {
+  opacity: 0; /* Initially hide the element */
+  transition: opacity 0.5s ease; /* Add transition for smooth fade-in effect */
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
