@@ -13,3 +13,46 @@
   align-items: center;
   justify-content: center;
 }
+.sqauresContainer {
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.squars {
+  width: 25%;
+  height: 27vh;
+  border-bottom: 1px solid #ffc300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftFlex {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  height: 27vh;
+  align-items: start;
+}
+.leftFlex p {
+  font-size: 0.7rem;
+}
+
+.rightFlex {
+  width: 50%;
+  height: 22vh;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.rightFlex p {
+  width: 95%;
+}
