@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
 import "../../styles/product.css";
 import { LampContainer } from "../components/lamp";
@@ -17,7 +17,7 @@ function Product({ id, name, price }) {
     opacity: fadeIn ? 1 : 0,
     from: { opacity: 0 },
     config: { duration: 1700 },
-    delay: id * 200,
+    delay: id * 150,
   });
 
   return (
@@ -85,6 +85,8 @@ export function LampDemo() {
 }
 
 function Page() {
+  const [page, setPage] = useState(0); // Track current page
+
   const products = [
     { id: 1, name: "Laptop", price: 899, imageUrl: "laptop_image_url.jpg" },
     {
@@ -129,19 +131,85 @@ function Page() {
       price: 99.99,
       imageUrl: "shoes_image_url.jpg",
     },
+    {
+      id: 9,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 10,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 11,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 12,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 13,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 14,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 15,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
+    {
+      id: 16,
+      name: "Running Shoes",
+      price: 99.99,
+      imageUrl: "shoes_image_url.jpg",
+    },
   ];
+  const itemsPerPage = 8; // Number of products per page
+
+  const totalPages = Math.ceil(products.length / itemsPerPage); // Calculate total pages
+
+  const handleNext = () => {
+    setPage((prevPage) => (prevPage === totalPages - 1 ? 0 : prevPage + 1));
+  };
+
+  const handleBack = () => {
+    setPage((prevPage) => (prevPage === 0 ? totalPages - 1 : prevPage - 1));
+  };
+
+  const startIndex = page * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, products.length);
+  const visibleProducts = products.slice(startIndex, endIndex);
   return (
     <div className="productContainer">
       <div className="productSquare">
         <LampContainer />
       </div>
       <div className="sqauresContainer">
-        {products.map((product) => (
+        {visibleProducts.map((product) => (
           <Product key={product.id} {...product} />
         ))}
+      </div>
+      <div className="arrow">
+        <h1 onClick={handleBack}>Back</h1>
+        <h1 onClick={handleNext}>Next</h1>
       </div>
     </div>
   );
 }
-
 export default Page;
