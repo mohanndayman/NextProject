@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import "../styles/index.css";
 import { HeroParallax } from "./components/hero-parallax";
 import image1 from "../images/22.jpg";
@@ -7,7 +5,6 @@ import image2 from "../images/33.jpg";
 import image3 from "../images/44.jpg";
 import image4 from "../images/55.jpg";
 import image5 from "../images/66.jpg";
-
 import image10 from "../images/99.jpg";
 import SecondSecion from "./components/SecondSecion";
 import ThirsSecion from "./components/ThirsSecion";
