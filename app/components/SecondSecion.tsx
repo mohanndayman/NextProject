@@ -6,6 +6,7 @@ import { PinContainer } from "./3d-pin";
 import image1 from "../../images/22.jpg";
 import image2 from "../../images/33.jpg";
 import { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface AnimatedPinDemoProps {
   title: string;
@@ -32,6 +33,16 @@ function AnimatedPinDemo({ title, description, image }: AnimatedPinDemoProps) {
       }
     });
   };
+  function calculateWidth() {
+    // Calculate 80% of the container's width
+    const containerWidth = window.innerWidth; // or the width of the container you're using
+    return containerWidth * 0.8;
+  }
+  function calculateHeight() {
+    // Calculate 20% of the viewport height
+    const viewportHeight = window.innerHeight;
+    return viewportHeight * 0.2;
+  }
 
   return (
     <div className="AnimatedPinDemo">
@@ -47,7 +58,12 @@ function AnimatedPinDemo({ title, description, image }: AnimatedPinDemoProps) {
             <span style={{ color: "white" }}>{description}</span>
           </div>
           <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br" />
-          <img src={image.src} alt="Description" />
+          <Image
+            src={image.src}
+            alt="Description"
+            width={calculateWidth()}
+            height={calculateHeight()}
+          />
         </div>
       </PinContainer>
     </div>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../../styles/ProductView.css";
 import Product from "../../images/4202-large.jpg";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 function Popup({ phoneNumber, onClose }) {
   return (
@@ -48,7 +49,7 @@ function Page() {
         </div>
 
         <div className="ProductImagee">
-          <img src={Product.src} alt="product" />
+          <Image src={Product} alt="product" width={"50%"} height={"45vh"} />
         </div>
         <div className="ProductDetails">
           {showPopup && (

@@ -6,6 +6,7 @@ import { LampContainer } from "../components/lamp";
 import { motion } from "framer-motion";
 import image1 from "../../images/22.jpg";
 import Link from "next/link";
+import Image from "next/image";
 
 function Product({ id, name, price }) {
   const [fadeIn, setFadeIn] = React.useState(false);
@@ -20,12 +21,26 @@ function Product({ id, name, price }) {
     config: { duration: 1700 },
     delay: id * 150,
   });
-
+  function calculateWidth() {
+    // Calculate 80% of the container's width
+    const containerWidth = window.innerWidth; // or the width of the container you're using
+    return containerWidth * 0.8;
+  }
+  function calculateHeight() {
+    // Calculate 20% of the viewport height
+    const viewportHeight = window.innerHeight;
+    return viewportHeight * 0.2;
+  }
   return (
     <animated.div style={fade} className="squars">
       <div className="leftFlex">
         <Link href="/ProductView" passHref>
-          <img src={image1.src} alt="Product" />
+          <Image
+            src={image1.src}
+            alt="Product"
+            width={calculateWidth()}
+            height={calculateHeight()}
+          />
         </Link>
 
         <div className="NameAndRateSquare">
