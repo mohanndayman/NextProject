@@ -45,7 +45,7 @@ function page() {
           </p>
         </div>
 
-        <div className="ProductImage">
+        <div className="ProductImagee">
           <img src={Product.src} alt="product" />
         </div>
         <div class="ProductDetails">
