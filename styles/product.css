@@ -135,3 +135,16 @@
 .arrow h1 {
   border-bottom: #c59b08 1px solid;
 }
+@media screen and (max-width: 1350px) {
+  .squaresContainer .squares {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .squaresContainer .squares {
+    width: 45%; /* Adjusted width for even smaller screens */
+  }
+}
