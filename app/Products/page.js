@@ -22,15 +22,25 @@ function Product({ id, name, price }) {
     delay: id * 150,
   });
   function calculateWidth() {
-    // Calculate 80% of the container's width
-    const containerWidth = window.innerWidth; // or the width of the container you're using
-    return containerWidth * 0.8;
+    if (typeof window !== "undefined") {
+      // Calculate 80% of the container's width
+      const containerWidth = window.innerWidth; // or the width of the container you're using
+      return containerWidth * 0.8;
+    }
+    // Default width if window is not available (e.g., server-side rendering)
+    return 0;
   }
+
   function calculateHeight() {
-    // Calculate 20% of the viewport height
-    const viewportHeight = window.innerHeight;
-    return viewportHeight * 0.2;
+    if (typeof window !== "undefined") {
+      // Calculate 20% of the viewport height
+      const viewportHeight = window.innerHeight;
+      return viewportHeight * 0.2;
+    }
+    // Default height if window is not available (e.g., server-side rendering)
+    return 0;
   }
+
   return (
     <animated.div style={fade} className="squars">
       <div className="leftFlex">
