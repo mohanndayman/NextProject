@@ -22,7 +22,6 @@ function Popup({ phoneNumber, onClose }) {
 }
 
 function Page() {
-  // Corrected function name starts with uppercase
   const [showPopup, setShowPopup] = useState(false);
 
   const handleCallButtonClick = () => {
@@ -42,9 +41,9 @@ function Page() {
           <h1>Calacatta Gold</h1>
           <p>
             <strong style={{ color: "#ffc300" }}>Calacatta Gold</strong>,
-            inspired from Italy's most famous natural calacatta marble with gold
-            dramatic veining in pure white background, is a luxurious color for
-            your choice
+            inspired from Italy&apos;s most famous natural calacatta marble with
+            gold dramatic veining in pure white background, is a luxurious color
+            for your choice
           </p>
         </div>
 
@@ -92,4 +91,4 @@ function Page() {
   );
 }
 
-export default Page; // Export corrected function name
+export default Page;
