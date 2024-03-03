@@ -71,7 +71,7 @@ function Product({ id, name, price }) {
   );
 }
 
-export function LampDemo() {
+export function LampDemo(props) {
   return (
     <LampContainer>
       <motion.h1
