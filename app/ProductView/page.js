@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../../styles/ProductView.css";
 import Product from "../../images/4202-large.jpg";
 import Footer from "../components/Footer";
+
 function Popup({ phoneNumber, onClose }) {
   return (
     <div className="popup">
@@ -19,7 +20,9 @@ function Popup({ phoneNumber, onClose }) {
     </div>
   );
 }
-function page() {
+
+function Page() {
+  // Corrected function name starts with uppercase
   const [showPopup, setShowPopup] = useState(false);
 
   const handleCallButtonClick = () => {
@@ -49,7 +52,6 @@ function page() {
           <img src={Product.src} alt="product" />
         </div>
         <div className="ProductDetails">
-          {" "}
           {showPopup && (
             <Popup phoneNumber="123-456-7890" onClose={handleClosePopup} />
           )}
@@ -72,9 +74,7 @@ function page() {
               </div>
               <div className="detail">
                 <label>Book Now:</label>
-                {/* Call button */}
                 <strong>
-                  {" "}
                   <button
                     onClick={handleCallButtonClick}
                     style={{ color: "white", borderBottom: "1px solid gold" }}
@@ -86,10 +86,10 @@ function page() {
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
       <Footer />
     </>
   );
 }
 
-export default page;
+export default Page; // Export corrected function name
