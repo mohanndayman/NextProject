@@ -5,6 +5,7 @@ import "../../styles/product.css";
 import { LampContainer } from "../components/lamp";
 import { motion } from "framer-motion";
 import image1 from "../../images/22.jpg";
+import Link from "next/link";
 
 function Product({ id, name, price }) {
   const [fadeIn, setFadeIn] = React.useState(false);
@@ -23,7 +24,10 @@ function Product({ id, name, price }) {
   return (
     <animated.div style={fade} className="squars">
       <div className="leftFlex">
-        <img src={image1.src} alt="Product" />
+        <Link href="/ProductView" passHref>
+          <img src={image1.src} alt="Product" />
+        </Link>
+
         <div className="NameAndRateSquare">
           <div className="NameAndRate">
             <h1 style={{ color: "#ffc300" }}>{name}</h1>
