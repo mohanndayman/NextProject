@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import "../../styles/NavBar.css";
+import LanguageSelector from "../LanguageSelector";
 
 function NavBar() {
   return (
@@ -18,6 +19,9 @@ function NavBar() {
           </li>
           <li>
             <Link href="/about">About</Link>
+          </li>
+          <li>
+            <LanguageSelector />
           </li>
           <li>Call Us</li>
         </ul>

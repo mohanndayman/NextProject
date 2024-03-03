@@ -38,6 +38,10 @@
 .NavBarList li {
   font-size: 1.3rem;
   color: #ffc300;
+  display: flex;
+  align-items: center;
   font-weight: 400;
+  padding: 10px;
+  height: 5vh;
   border-bottom: #ffc300 1px solid;
 }

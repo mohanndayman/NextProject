@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import LanguageSelector from "../LanguageSelector";
+import useTranslation from "next-translate/useTranslation";
 import {
   motion,
   useScroll,
@@ -59,6 +61,7 @@ export const HeroParallax = ({
       ref={ref}
       className="py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
+      {" "}
       <Header />
       <motion.div
         style={{
@@ -102,8 +105,11 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+      {" "}
       <h1
         className="text-2xl md:text-7xl font-bold dark:text-white"
         style={{ color: "white" }}
@@ -114,9 +120,9 @@ export const Header = () => {
         className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200"
         style={{ color: "#ffc300" }}
       >
-        Explore our exquisite selection of ceramic floor tiles, crafted with
-        precision and style. Elevate your space with our high-quality, durable
-        flooring solutions, designed to inspire.
+        {t(
+          "Explore our exquisite selection of ceramic floor tiles, crafted with precision and style. Elevate your space with our high-quality, durableflooring solutions, designed to inspire. "
+        )}
       </p>
     </div>
   );
@@ -160,7 +166,7 @@ export const ProductCard = ({
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
-      </h2>
+      </h2>{" "}
     </motion.div>
   );
 };
