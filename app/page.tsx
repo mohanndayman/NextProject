@@ -15,10 +15,10 @@ export default function Home() {
   const products = [
     { title: "one o one", link: "#", thumbnail: image1.src }, // Adjusted image1 to image1.src
     { title: "Product 2", link: "#", thumbnail: image5.src }, // Adjusted image5 to image5.src
-    { title: "Product 2", link: "#", thumbnail: image2.src }, // Adjusted image2 to image2.src
-    { title: "Product 2", link: "#", thumbnail: image4.src }, // Adjusted image4 to image4.src
-    { title: "Product 2", link: "#", thumbnail: image10.src }, // Adjusted image10 to image10.src
-    { title: "Product 2", link: "#", thumbnail: image3.src }, // Adjusted image3 to image3.src
+    { title: "Product 3", link: "#", thumbnail: image2.src }, // Adjusted image2 to image2.src
+    { title: "Product 4", link: "#", thumbnail: image4.src }, // Adjusted image4 to image4.src
+    { title: "Product 5", link: "#", thumbnail: image10.src }, // Adjusted image10 to image10.src
+    { title: "Product 6", link: "#", thumbnail: image3.src }, // Adjusted image3 to image3.src
     // Add more products as needed
   ];
 

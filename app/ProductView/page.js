@@ -48,29 +48,29 @@ function page() {
         <div className="ProductImagee">
           <img src={Product.src} alt="product" />
         </div>
-        <div class="ProductDetails">
+        <div className="ProductDetails">
           {" "}
           {showPopup && (
             <Popup phoneNumber="123-456-7890" onClose={handleClosePopup} />
           )}
-          <div class="squareDetails">
-            <div class="product-details">
-              <div class="detail">
+          <div className="squareDetails">
+            <div className="product-details">
+              <div className="detail">
                 <label>Color:</label> <strong>White</strong>
               </div>
-              <div class="detail">
+              <div className="detail">
                 <label>Size:</label> <strong>Medium</strong>
               </div>
-              <div class="detail">
+              <div className="detail">
                 <label>Material:</label> <strong>Cotton</strong>
               </div>
-              <div class="detail">
+              <div className="detail">
                 <label>Price:</label> <strong>$19.99</strong>
               </div>
-              <div class="detail">
+              <div className="detail">
                 <label>Availability:</label> <strong>In Stock</strong>
               </div>
-              <div class="detail">
+              <div className="detail">
                 <label>Book Now:</label>
                 {/* Call button */}
                 <strong>
