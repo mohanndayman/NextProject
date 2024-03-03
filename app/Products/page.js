@@ -103,7 +103,7 @@ export function LampDemo(props) {
   );
 }
 
-function Page() {
+export default function Page() {
   const [page, setPage] = useState(0); // Track current page
 
   const products = [
@@ -231,4 +231,3 @@ function Page() {
     </div>
   );
 }
-export default Page;
