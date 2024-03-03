@@ -4,6 +4,7 @@
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
+
 .NavBar-Container {
   width: 100%;
   position: fixed;
@@ -13,6 +14,7 @@
   z-index: 999999999999;
   backdrop-filter: blur(50px);
 }
+
 .Logo {
   width: 40%;
   height: 8vh;
@@ -21,6 +23,7 @@
   justify-content: center;
   color: #ffc300;
 }
+
 .NavBarList {
   width: 60%;
   height: 8vh;
@@ -28,6 +31,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .NavBarList ul {
   display: flex;
   width: 75%;
@@ -35,6 +39,7 @@
   align-items: center;
   justify-content: space-around;
 }
+
 .NavBarList li {
   font-size: 1.3rem;
   color: #ffc300;
@@ -44,4 +49,35 @@
   padding: 10px;
   height: 5vh;
   border-bottom: #ffc300 1px solid;
+}
+
+@media only screen and (max-width: 768px) {
+  .NavBar-Container {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Logo {
+    width: 100%;
+    display: none;
+  }
+
+  .NavBarList {
+    width: 100%;
+  }
+
+  .NavBarList ul {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .NavBarList li {
+    padding: 15px 0;
+    border-bottom: none;
+  }
 }

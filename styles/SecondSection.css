@@ -1,34 +1,61 @@
 .SecondSection {
   width: 100%;
-  height: 90vh;
+  height: auto; /* Adjusted to auto to allow content to determine height */
+  min-height: 90vh; /* Minimum height to ensure section is at least 90% of viewport height */
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
+
 .HeadText {
   width: 100%;
-  height: 15vh;
+  height: auto; /* Adjusted to auto to allow content to determine height */
+  min-height: 15vh; /* Minimum height to ensure section is at least 15% of viewport height */
   margin-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .HeadText h1 {
   font-size: 2.3rem;
 }
+
 .HeadText p {
   color: #ffc300;
   opacity: 0.8;
 }
+
 .Cards {
   width: 100%;
-  height: 65vh;
+  height: auto; /* Adjusted to auto to allow content to determine height */
+  min-height: 65vh; /* Minimum height to ensure section is at least 65% of viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 80px;
+  flex-wrap: wrap;
 }
-/* SecondSection.css */
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .SecondSection {
+    padding: 20px; /* Add padding to provide space around the content */
+  }
+
+  .HeadText {
+    margin-top: 40px; /* Reduce margin top on smaller screens */
+    text-align: center;
+  }
+
+  .Cards {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    gap: 40px; /* Reduce gap between cards on smaller screens */
+  }
+}
+
+/* Add animation styles */
 .AnimatedPinDemo {
   opacity: 0; /* Initially hide the element */
   transition: opacity 0.5s ease; /* Add transition for smooth fade-in effect */

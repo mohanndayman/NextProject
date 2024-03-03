@@ -44,22 +44,7 @@ footer {
   font-size: 2em;
   margin: -1% 1%;
 }
-.fac {
-  position: absolute;
-  left: 750px;
-}
-.lin {
-  position: absolute;
-  left: 850px;
-}
-.git {
-  position: absolute;
-  left: 950px;
-}
-.inst {
-  position: absolute;
-  left: 1070px;
-}
+
 @media (max-width: 720px) {
   .footer {
     text-align: left;

@@ -108,7 +108,7 @@ export const Header = () => {
         className="text-2xl md:text-7xl font-bold dark:text-white"
         style={{ color: "white" }}
       >
-        Thee Ultimate <br /> Ceramic Flooring Collection
+        The Ultimate <br /> Ceramic Flooring Collection
       </h1>
       <p
         className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200"

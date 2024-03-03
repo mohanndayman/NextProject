@@ -2,7 +2,9 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 .HeroSection {
-  height: 220vh;
+  height: auto;
+  background-color: black;
 }
