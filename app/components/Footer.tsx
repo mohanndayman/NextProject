@@ -10,7 +10,7 @@ function Footer() {
     <div className="footer">
       <footer>
         <div className="footer">
-          <div className="row">
+          {/* <div className="row">
             <a href="#">
               <i className="fac ">
                 <FaFacebook />
@@ -32,7 +32,7 @@ function Footer() {
                 <FiInstagram />
               </i>{" "}
             </a>
-          </div>
+          </div> */}
 
           <div className="row">
             <ul>
