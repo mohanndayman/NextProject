@@ -4,6 +4,9 @@ import "../../styles/ProductView.css";
 import Product from "../../images/4202-large.jpg";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import productOne from "../../images/product1.jpg";
+import productTwo from "../../images/product2.jpg";
+import productThree from "../../images/product3.jpg";
 
 function Popup({ phoneNumber, onClose }) {
   return (
@@ -24,15 +27,19 @@ function Popup({ phoneNumber, onClose }) {
 
 function Page() {
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(Product); // Default to main product image
 
   const handleCallButtonClick = () => {
-    // Replace phoneNumber with the desired phone number
     const phoneNumber = "123-456-7890";
     setShowPopup(true);
   };
 
   const handleClosePopup = () => {
     setShowPopup(false);
+  };
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
   };
 
   return (
@@ -49,7 +56,49 @@ function Page() {
         </div>
 
         <div className="ProductImagee">
-          <Image src={Product} alt="product" width={"50%"} height={"45vh"} />
+          <div className="productColors">
+            <div
+              className="productColorsSelect"
+              onClick={() => handleImageClick(productOne)}
+            >
+              <Image
+                src={productOne}
+                alt="productOne"
+                width={"100%"}
+                height={"10vh"}
+              />
+            </div>
+            <div
+              className="productColorsSelect"
+              onClick={() => handleImageClick(productTwo)}
+            >
+              <Image
+                src={productTwo}
+                alt="productTwo"
+                width={"60%"}
+                height={"45vh"}
+              />
+            </div>
+            <div
+              className="productColorsSelect"
+              onClick={() => handleImageClick(productThree)}
+            >
+              <Image
+                src={productThree}
+                alt="productThree"
+                width={"60%"}
+                height={"45vh"}
+              />
+            </div>
+          </div>
+          <div className="productImageContainer">
+            <Image
+              src={selectedImage}
+              alt="MainImage"
+              width={"60%"}
+              height={"45vh"}
+            />
+          </div>
         </div>
         <div className="ProductDetails">
           {showPopup && (
