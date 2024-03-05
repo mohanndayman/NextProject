@@ -45,6 +45,8 @@
 }
 .productImageContainer img {
   width: 60%;
+  object-fit: cover;
+
   box-shadow: -3px 0px 50px -28px #ffc300;
   height: 45vh;
 

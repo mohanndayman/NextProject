@@ -51,33 +51,119 @@
   border-bottom: #ffc300 1px solid;
 }
 
+/* Media Queries for Responsive Design */
 @media only screen and (max-width: 768px) {
   .NavBar-Container {
     height: auto;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 
   .Logo {
     width: 100%;
-    display: none;
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .NavBarList {
     width: 100%;
+    justify-content: center;
+    height: 25vh;
   }
 
   .NavBarList ul {
-    width: 100%;
-    height: auto;
+    width: auto;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
   }
 
   .NavBarList li {
-    padding: 15px 0;
     border-bottom: none;
+    padding: 5px 0;
+    text-align: center;
+  }
+}
+.MenuToggle {
+  display: none;
+}
+
+.MenuIcon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 3px;
+  background-color: #ffc300;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+/* Fade out the second bar */
+.open .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .NavBar-Container {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .Logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .MenuToggle {
+    display: block;
+    position: absolute;
+    top: -7px;
+    padding: 10px;
+    right: 10px;
+  }
+
+  .NavBarList {
+    width: 100%;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .NavBarList.open {
+    height: 25vh;
+  }
+
+  .NavBarList ul {
+    width: auto;
+    flex-direction: column;
+  }
+
+  .NavBarList li {
+    border-bottom: none;
+    padding: 5px 0;
+    text-align: center;
   }
 }

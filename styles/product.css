@@ -15,8 +15,6 @@
 }
 .sqauresContainer {
   width: 100%;
-  position: absolute;
-  top: 35%;
   height: auto;
   display: flex;
   align-items: center;
@@ -122,12 +120,12 @@
 }
 .arrow {
   width: 100%;
+  padding: 20px;
+  margin-top: 25px;
   height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 95%;
   gap: 10px;
   color: #c59b08;
   cursor: pointer;
@@ -146,5 +144,51 @@
 @media screen and (max-width: 768px) {
   .squaresContainer .squares {
     width: 45%; /* Adjusted width for even smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .squaresContainer {
+    flex-direction: column; /* Change flex-direction to column for stacking squares vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .squars {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+
+  .leftFlex {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+
+  .leftFlex img,
+  .NameAndRateSquare {
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+}
+@media screen and (max-width: 768px) {
+  .squaresContainer .squares {
+    width: 45%; /* Adjusted width for even smaller screens */
+  }
+}
+@media (max-width: 1244px) {
+  .squaresContainer {
+    flex-direction: column; /* Change flex-direction to column for stacking squares vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .squars {
+    width: 50%; /* Adjusted width for smaller screens */
+  }
+
+  .leftFlex {
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+  .leftFlex img {
+    width: 150%;
+  }
+
+  .NameAndRateSquare {
+    width: 150%;
+    height: 17vh;
   }
 }
