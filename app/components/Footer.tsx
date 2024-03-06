@@ -55,8 +55,8 @@ function Footer() {
           </div>
 
           <div className="row">
-            INFERNO Copyright © 2021 Inferno - All rights reserved || Designed
-            By: Mahesh
+            INFERNO Copyright © 2023 Inferno - All rights reserved || Designed
+            By: Mohannad Hasan
           </div>
         </div>
       </footer>
